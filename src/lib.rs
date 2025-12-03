@@ -338,6 +338,8 @@ mod tests {
         let payload: [u8; 32] = [1; 32];
         let display = Baid64Display::with(
             hri, payload, true, // chunking
+            8, // chunk_first
+            7, // chunk_len
             true, // prefix
             true, // suffix (mnemonic)
             true, // embed_checksum
@@ -366,6 +368,8 @@ mod tests {
         let display = Baid64Display::with(
             hri, payload, // Using LEN=4 for simplicity in test
             false,   // chunking
+            8,       // chunk_first
+            7,       // chunk_len
             true,    // prefix
             true,    // suffix (mnemonic)
             true,    // embed_checksum
@@ -491,6 +495,8 @@ mod tests {
         let payload: [u8; 32] = [3; 32];
         let display = Baid64Display::with(
             hri, payload, true, // chunking
+            8, // chunk_first
+            7, // chunk_len
             true, // prefix
             true, // suffix
             true, // embed_checksum
