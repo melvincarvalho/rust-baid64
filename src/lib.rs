@@ -178,6 +178,7 @@ pub struct Baid64Display<const LEN: usize = 32> {
 }
 
 impl<const LEN: usize> Baid64Display<LEN> {
+    #[allow(clippy::too_many_arguments)]
     pub fn with(
         hri: &'static str,
         payload: [u8; LEN],
